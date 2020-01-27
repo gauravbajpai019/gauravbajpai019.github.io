@@ -1,0 +1,23 @@
+<ng-container [formGroup]="dobForm">
+  <div class="form-inline">
+    <label [for]="dayInputId" class="sr-only">Day</label>
+    <input [id]="dayInputId" [required]="internalIsRequired" type="text" class="form-control dob-day" [ngClass]="{ 'dob-error-border': dobForm.hasError('invalid-dob') }" formControlName="dobDay" maxlength="2" inputmode="decimal"   />
+
+    <label [for]="monthInputId" class="sr-only">Month</label>
+    <input [id]="monthInputId" [required]="internalIsRequired" type="text" class="form-control dob-month" [ngClass]="{ 'dob-error-border': dobForm.hasError('invalid-dob') }" formControlName="dobMonth"  maxlength="2" inputmode="decimal" />
+
+    <label [for]="yearInputId" class="sr-only">Year</label>
+    <input [id]="yearInputId" [required]="internalIsRequired" type="text" class="form-control dob-year" [ngClass]="{ 'dob-error-border': dobForm.hasError('invalid-dob') }" formControlName="dobYear"  maxlength="4" inputmode="decimal"  />
+  </div>
+
+  <lib-error-message formControlName="dobDay" key="required">{{ internalContent.day.errorMessages['required'] }}</lib-error-message>
+  <lib-error-message formControlName="dobDay" key="pattern">{{ internalContent.day.errorMessages['pattern'] }}</lib-error-message>
+
+  <lib-error-message formControlName="dobMonth" key="required">{{ internalContent.month.errorMessages['required'] }}</lib-error-message>
+  <lib-error-message formControlName="dobMonth" key="pattern">{{ internalContent.month.errorMessages['pattern'] }}</lib-error-message>
+
+  <lib-error-message formControlName="dobYear" key="required">{{ internalContent.year.errorMessages['required'] }}</lib-error-message>
+  <lib-error-message formControlName="dobYear" key="pattern">{{ internalContent.year.errorMessages['pattern'] }}</lib-error-message>
+
+  <lib-error-message [control]="dobForm" key="invalid-dob">{{ internalContent.errorMessages['invalid-dob'] }}</lib-error-message>
+</ng-container>

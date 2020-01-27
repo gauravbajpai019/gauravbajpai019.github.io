@@ -1,0 +1,21 @@
+
+.form-control-error-message {
+  margin: 0;
+
+  font-size: 14px;
+  font-family: Arial, Helvetica, Verdana, Sans-Serif;
+  font-style: italic;
+  color: red;
+
+  background-size: 16px;
+}
+
+.lib-error-message {
+  display: block;
+}
+
+.form-group {
+  .lib-error-message .form-control-error-message:first-of-type {
+    margin-top: 8px;
+  }
+}

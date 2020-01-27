@@ -1,0 +1,27 @@
+
+
+.lib-dob {
+  .dob-day,
+  .dob-month,
+  .dob-year {
+    width: 56px;
+    margin-right: 8px;
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .dob-year {
+    width: 75px;
+  }
+
+  .dob-error-border {
+    border: solid 2px red;
+    background-color: white;
+    box-shadow: none;
+  }
+}
+
+fieldset {
+  padding: 30px;
+  width: 30%;
+}
